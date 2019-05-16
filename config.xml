@@ -1,5 +1,5 @@
 <?xml version="1.1" encoding="UTF-8" standalone="yes"?>
-<widget id="com.fdlm.cdsmovil" version="1.9" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.fdlm.cdsmovil" version="2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>CDS Móvil</name>
     <description>
         CDS Móvil
@@ -18,7 +18,7 @@
     <preference name="SplashScreenDelay" value="3000"/>
     <preference name="FadeSplashScreen" value="true" />  
     <preference name="orientation" value="portrait"/>
-    <preference name="android-targetSdkVersion" value="26"/>
+    <preference name="android-targetSdkVersion" value="28"/>
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true"/>
     </feature>
