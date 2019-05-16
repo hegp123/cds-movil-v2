@@ -1,0 +1,55 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-fdlm cdsModalHeader">
+        <div class="buttons">
+            <div class="buttons">
+                <button class="button button-icon icon-left ion-android-arrow-back" style="color: #fff" ng-click="modalCambiarContrasenha.hide()"></button>
+            </div>
+        </div>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div class="sub-header padding">
+            Cambiar contraseña
+        </div>
+
+        <form ng-submit="cambiarClave(modalCambiarContrasenha)" name="frmCambiarClave" novalidate="">
+            <div class="padding">
+
+                <input type="hidden" ng-model="clave.idRecaudador">
+
+                <label class="item item-input cajaBusqueda" ng-class="{ 'has-error' : frmCambiarClave.claveActual.$invalid}">
+                    <i class="icon ion-lock-combination placeholder-icon"></i>
+                    <input type="password" name="claveActual" ng-model="clave.claveActual" placeholder="Ingresa la contraseña actual" autofocus required>
+                </label>
+
+                <br/>
+
+                <label class="item item-input cajaBusqueda" ng-class="{ 'has-error' : frmCambiarClave.claveNueva.$invalid}">
+                    <i class="icon ion-lock-combination placeholder-icon"></i>
+                    <input type="password" name="claveNueva" class="immediate-help" ng-init="focused = false" ng-focus="focused = true" ng-blur="focused = false" password-validate id="inputPassword" ng-model="clave.nuevaClave" ng-minlength="8" placeholder="Ingresa la nueva contraseña" required>
+                </label>                
+                <div class="input-help requerimientos-clave" ng-class="{'requerimientos-clave-mostrar': focused}">
+                    <h4>La contraseña debe cumplir con:</h4>
+                    <ul>
+                        <li ng-class="pwdHasLetter">Mínimo <strong>una letra</strong></li>
+                        <li ng-class="pwdHasNumber">Mínimo <strong>un número</strong></li>
+                        <li ng-class="pwdValidLength">Mínimo <strong>8 caracteres</strong></li>
+                    </ul>
+                </div>
+                <br/>
+
+                <label class="item item-input cajaBusqueda" ng-class="{ 'has-error' : frmCambiarClave.claveConfirmar.$invalid}">
+                    <i class="icon ion-lock-combination placeholder-icon"></i>
+                    <input type="password" name="claveConfirmar" match-password="claveNueva" ng-model="clave.confirmarClave" ng-minlength="8" placeholder="Confirma la nueva contraseña" required>
+                </label>
+            </div>
+
+            <br/>
+
+            <div class="padding">
+                <button type="submit" class="button button-fdlm button-block" ng-disabled="frmCambiarClave.$invalid">
+                    <i class="icon ion-android-checkmark-circle"></i> Cambiar contraseña
+                </button>            
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

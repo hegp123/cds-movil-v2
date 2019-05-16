@@ -1,0 +1,41 @@
+<!--
+    * Vista de registro de pagos
+    * Desarrollado por: Roberto Chajin Ortiz y Ricardo Suarez Vera - Visión Ingeniería S.A.S
+    * Revisión No.: 1.0
+-->
+
+<ion-nav-bar class="bar-fdlm cdsMainHeader">
+    <ion-nav-buttons side="secondary">
+        <button class="button-icon icon ion-gear-a" ng-click="mostrarOpciones()"></button>
+    </ion-nav-buttons>        
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-view>
+    <ion-content class="padding has-header has-subheader">
+        <div class="sub-header padding">
+            {{nombreVista}}
+        </div>
+        <div class="padding">
+            <form ng-submit="iniciarBusqueda()" name="frmBusquedaCredito" novalidate="">
+                <p class="fdlm">Buscar por:</p>
+                <label class="item item-input item-select cajaBusqueda selectBox">
+                    <select ng-model="tipoSeleccionado" ng-options="tipo.nombre for tipo in tipoBusqueda" ng-change="cambiarTipoBusqueda(tipoSeleccionado)"></select>
+                </label>
+                <label class="item item-input cajaBusqueda" ng-class="{ 'has-error' : frmBusquedaCredito.busqueda.$invalid}">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="{{tipoSeleccionado.tipo}}" name="busqueda" ng-model="cadenaBusqueda.busqueda" placeholder="{{tipoSeleccionado.placeholder}}" required>
+                </label>
+
+                <button type="submit" class="button button-fdlm button-block" ng-disabled="frmBusquedaCredito.$error.required">
+                    <i class="icon ion-search"></i> Buscar
+                </button>  
+            </form>
+        </div>
+    </ion-content>
+
+    <!--    <ion-footer-bar class="bar-footer bar-stable hide-on-keyboard-open">
+            <p class="letra-peque">Bienvenido {{datosSesion.nombreUsuario}}</p>
+        </ion-footer-bar>-->
+</ion-view>        

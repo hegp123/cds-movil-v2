@@ -1,0 +1,13 @@
+{
+    "alwaysRun": true,
+    "recursiveFolderSearch": true,
+    "foldersToProcess": [
+        "js"
+    ],
+    "uglifyJsOptions": {
+        "compress": {
+            "drop_console": true
+        },
+        "fromString": true
+    }
+}

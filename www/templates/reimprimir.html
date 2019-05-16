@@ -1,0 +1,25 @@
+<ion-nav-bar class="bar-fdlm cdsMainHeader">
+    <ion-nav-buttons side="secondary">
+        <button class="button-icon icon ion-gear-a" ng-click="mostrarOpciones()"></button>
+    </ion-nav-buttons>        
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-view>
+    <ion-content class="has-header has-subheader">
+        <div class="sub-header padding">
+            {{nombreVista}}
+        </div>  
+        <form ng-submit="buscarFactura()" class="padding" name="frmBusquedaFactura" novalidate="">
+            <p class="fdlm">Orden de Recibo No.:</p>
+            <label class="item item-input cajaBusqueda" ng-class="{ 'has-error' : frmBusquedaFactura.busqueda.$invalid}">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="number" name="busqueda" ng-model="cadenaBusqueda.factura" placeholder="Escriba aquí el No. de Orden de Recibo" required>
+            </label>
+            <button type="submit" class="button button-fdlm button-block" ng-disabled="frmBusquedaFactura.$error.required">
+                <i class="icon ion-search"></i> Buscar
+            </button>  
+        </form>
+    </ion-content>
+</ion-view>

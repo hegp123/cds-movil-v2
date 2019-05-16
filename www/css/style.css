@@ -1,0 +1,391 @@
+/* 
+ * Hoja de estilos de la aplicación
+ * Desarrollado por: Ricardo Suarez Vera - Visión Ingeniería S.A.S
+ * Revisión No.: 1.0
+ */
+
+.cdsTabs .tabs{height:100px;}
+
+.cdsTabs .tab-item-active i:before{
+    content:none;
+}
+
+.cdsTabs .tab-item i:before{
+    content:none;
+}
+.cdsTabs .tab-title{font-size:110%;}
+
+.tab-item i{height:75px!important;}
+
+.regPago.tab-item-active i{background:url(../img/registrarPagoAct.png)no-repeat center center!important; }
+
+.regPago.tab-item i{background:url(../img/registrarPago.png)no-repeat center center; }
+
+.reportPagos.tab-item-active i{background:url(../img/reportePagosAct.png)no-repeat center center!important; }
+
+.reportPagos.tab-item i{background:url(../img/reportePagos.png)no-repeat center center; }
+
+.reimpFactura.tab-item-active i{background:url(../img/reimpFacturaAct.png)no-repeat center center!important; }
+
+.reimpFactura.tab-item i{background:url(../img/reimpFactura.png)no-repeat center center; }
+
+.ion-gear-a{background:url(../img/appIconMore.png)no-repeat center center!important; width:25px;}
+
+.ion-gear-a:before{content:none;}
+
+.cdsMainHeader .title{right:0 !important; background:url(../img/cdsMovil.png)no-repeat center center!important;}
+
+.cdsModalHeader .header{right:0 !important; background:url(../img/cdsMovil.png)no-repeat center center!important;}
+
+//.cdsModalHeader {background:url(../img/cdsMovil.png)#872175 no-repeat center center!important;}
+
+.regPagoList .item{
+    margin:11px 8px; border-radius: 5px; 
+
+}
+
+.regPagoList .item a{
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%)!important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f2f2f2))!important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f2f2f2 100%)!important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#f2f2f2 100%)!important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#f2f2f2 100%)!important; /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%,#f2f2f2 100%)!important; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dadada',GradientType=0 ); /* IE6-9 */
+
+}
+
+.regPagoList .list{padding:10px 0;}
+
+.cajaBusqueda {margin:11px 8px; border-radius: 5px;}
+
+.scroll-bar{z-index: 9998 !important;}
+
+
+.bar.bar-stable.bar-footer {
+    background:#e5e5e5!important; 
+    height: auto; 
+    padding:5px 10px;
+    border-top: 3px solid #9f9f9f !important;
+    color:#000 !important;
+    z-index: 99999;
+}
+
+.sub-header {
+    background-color: #e6d0e3;
+    color: #872175;
+    font-weight:bold;
+}
+
+.fdlm, p.fdlm {
+    color: #872175;
+}
+
+.fdlm, a.fdlm {
+    color: #872175;
+}
+
+.ion-android-arrow-back{
+    background:url(../img/arrowBack.png)no-repeat center center!important; 
+}
+
+.ion-android-arrow-back:before {content:none;}
+
+/*.has-tabs-top{top:140px!important;}*/
+
+.scroll-content{padding:0!important;}
+
+.tabs-striped .tab-item.tab-item-active{border-color:#872175}
+
+.selectBox{padding:20px;}
+
+.item-select select{ top:-12px!important; padding:14px 48px 5px 16px!important;}
+
+.action-sheet-wrapper{
+    top:40px !important; 
+    width:200px!important;
+    left:auto!important;
+    margin:initial!important;
+}
+
+.action-sheet{border:1px solid #872175;border-radius: 5px;}
+
+.action-sheet-wrapper{height:100px;}
+
+.platform-android .action-sheet .button{
+    font-size:13px!important;
+    color:#393939
+}
+
+.button.button-fdlm{
+    color: #ffd100 !important;
+    border-radius: 5px;
+    //margin:0 auto;
+    //width:auto;
+    background-color:#630448!important;
+    border:none !important;
+}
+
+.button.button-cancelar{
+    border-radius: 5px;
+    margin:0 auto;
+    width:auto;
+    border:none !important;
+}
+
+.login{
+    background:#872175 !important;
+    text-align:center;
+}
+
+.appIconLog{padding: 60px 0 15px;}
+
+.login label{
+    margin: 10px 0;
+    font-size:16px;
+    font-weight:bold;
+    color: #FFD100;
+}
+
+.login .item-input{
+    margin: 10px auto;
+    //width:80%;
+    border-radius: 5px;
+}
+
+.headerLogin{
+    color: #FFD100;
+    font-weight: bold;
+    padding:10px;
+    font-size:18px;
+    background-color:#630448;
+    margin:20px 0 20px; 
+
+}
+
+.popup{border-radius:5px!important;}
+
+.calendarInputCDS{float:left; width:75%;}
+
+.calendarCDS{float:rigth; position: relative; top:12px; min-height: 45px; border-radius: 5px;}
+
+/*-----------------------------------------------------------------------------------------*/
+
+
+/*
+*   Manejo de los spinner de carga
+*/
+.spinner.spinner-blanco {
+    stroke: #fff;
+    fill: #fff; 
+}
+
+.spinner-spiral.spinner-blanco .stop2 {
+    stop-color: #fff; 
+}
+
+.spinner svg {
+    width: 56px;
+    height: 56px;
+    stroke: #fff;
+    fill: #fff;
+}
+
+/*
+ *  Manejo de headers y footers
+ */
+.bar.bar-fdlm {
+    border-color: #6b46e5;
+    background-color: #872175;
+    background-image: linear-gradient(0deg, #6b46e5, #6b46e5 50%, transparent 50%);
+    color: #fff; 
+}
+.bar.bar-fdlm .title {
+    color: #fff; 
+}
+.bar.bar-fdlm.bar-footer {
+    background-image: linear-gradient(180deg, #6b46e5, #6b46e5 50%, transparent 50%); 
+}
+
+/*
+ *  Manejo de botones
+ */
+
+.button.button-fdlm:hover {
+    text-decoration: none; 
+}
+.button.button-fdlm.active, .button.button-fdlm.activated {
+    border-color: #872175;
+    background-color: #872173;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); 
+}
+.button.button-fdlm.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #872175; 
+}
+.button.button-fdlm.button-icon {
+    border-color: transparent;
+    background: none; 
+}
+.button.button-fdlm.button-outline {
+    border-color: #872175;
+    background: transparent;
+    color: #872175; 
+}
+.button.button-fdlm.button-outline.active, .button.button-fdlm.button-outline.activated {
+    background-color: #872175;
+    box-shadow: none;
+    color: #fff; 
+}
+
+/*
+ *  Manejo de tabs
+ */
+ion-tabs.tabs-color-active-fdlm .tab-item {
+    color: #444; 
+}
+ion-tabs.tabs-color-active-fdlm .tab-item.tab-item-active, ion-tabs.tabs-color-active-fdlm .tab-item.active, ion-tabs.tabs-color-active-fdlm .tab-item.activated {
+    color: #872175; 
+}
+
+.texto-justificado {
+    text-align: justify;
+}
+
+.letra-peque p{
+    font-size: smaller;
+}
+
+.letra-usuario{
+    font-size: 70%;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+}
+
+body.keyboard-open .has-footer{	
+    bottom: 0;
+}
+
+label.item.has-error {
+    border-bottom: 2px solid #F8971D;
+}
+
+.form-errors {
+    margin: 5px 0;
+}
+
+.form-error {
+    padding: 2px 0 2px 16px;
+    color: red;
+}
+
+//validación de contraseñas
+
+.input-help::before {
+    content: "\25C0";
+    position: absolute;
+    top:10px;
+    left:-12px;
+    font-size:16px;
+    line-height:16px;
+    color:#ddd;
+    text-shadow:none;
+}
+.input-help h4 {
+    margin:0;
+    padding:0;
+    font-weight: normal;
+    font-size: .9em;
+}
+
+/* Always hide the input help when it's pristine */
+input.ng-pristine + .input-help {
+    display: none;
+}
+
+/* Hide the invalid box while the input has focus */
+.ng-invalid:focus + .input-help {
+    display: none;
+}
+
+/* Show green border when stuff has been typed in, and its valid */
+.ng-dirty.ng-valid {
+    border-color:#3a7d34;
+}
+
+/* Show red border when stuff has been typed in, but its invalid */
+.ng-dirty.ng-invalid {
+    border-color:#ec3f41;
+}
+
+/* Show the help box once it has focus */
+.immediate-help:focus + .input-help {
+    display: block;
+}
+
+/* Immediate help should be red when pristine */
+.immediate-help.ng-pristine:focus + .input-help {
+    border-color:#ec3f41;
+}
+.immediate-help.ng-pristine:focus + .input-help::before {
+    color:#ec3f41;
+}
+
+/* Help hould be green when input is valid */
+.ng-valid + .input-help {
+    border-color:#3a7d34;
+}
+.ng-valid + .input-help::before {
+    color:#3a7d34;
+}
+
+/* Help should show and be red when invalid */
+.ng-invalid + .input-help {
+    display: block;
+    border-color: #ec3f41;
+}
+.ng-invalid + .input-help::before {
+    color: #ec3f41;
+}
+
+/* Style input help requirement bullets */
+.input-help ul {
+    list-style: none;
+    margin: 5px 0 0 0;
+}
+
+/* Default each bullet to be invalid with a red cross and text */
+.input-help li {
+    padding-left: 22px;
+    //line-height: 10px;
+    color:#ec3f41;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAA1CAYAAABIkmvkAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAJwAAACcBKgmRTwAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8wOS8xMlhq+BkAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAAEA0lEQVRIie2WW2jbVRzHv//zT5rkn0ub61zaNdEiPqTC9EFRhtgJk63qg3Wr0806pswNiYgDUXxwyryCEB8UBevtaSCCDHQoboKyoVvVzfRmL2napU0mrdbl8s//dy4+dM1M28n64FsPnIdz+XzO75zfOXA0pRRWU7o/uS9FxOc+3/vlIQBgq4F3fHxvKuIPJ9cFwi9uTXU8BwDa1Uaw/aN7UusCkWRbPI5yxcTI2Bgy49kXrkrwwIedqYg/nGyLXwsJiYHBYWTGs7Cq5Kpt4cA3PXft+2rX40vhrt7OVLgplIzHYuBKoH9gCKMjGVE1LdfJl86YDAAOfN2ziZP4NODyv9/z2fanFuH7P9iWCjcFk/FYK4QSGLgEk0WeUy/3mQCgPXFs9xbBRW883NrssDvQN3hWcOLPEPGWiD94MBaPQymBoaERjI9mBSfu+fHwL+biItpjR3e6JFfloDeAaGQ9SpUycvlp6ExHJBKGYsDvgyMYH81KTsL90yuX4VoWdh3pMqSQpWBjAC3RZkgpYEkCFDA8NIqJ0UlFxI3Tr/5aB9elsau305BcloKBAFpjLeBSYGRwDBNjk4oTN06/dnYZXCcAgK1vbzYkl6VwOATihOzYlOLEjTOvn1sRXiYAgDsP32YIKUuWaXFOwtP3xrnqleAVBQBwy/M3GZy4+PnN3/4TvqJgNWVVj2lNsCZYE6wJ1gRrgv9dYAMAHHw2Bl2fUEpBVavtLPVW/78nVR/Zk4CupzVHA6zChSOK0yHv0S8GFyK4BMPhAJxOgLE03/9kYhE2dz+agKaldY8bDaEQ7D5ft7Roy+UIlCooy5LQdaZ5vVBEgGmmrT172yVxaIylmdcDm9cHc2oK1Zm8kETvLAo0pRRk8mmnEqKouVw68zVCzP8F/uccFHHoXi/sjT6Y53Mw83mhOHn8J7416wQAwPftd0ouiswwdJu/CRASkBKQAmYuBzNfWIC/O173W6llwfbeu6Yi8tDsrAQJYGICyGQAIWDO5KUkaxlcJwAASdSmaWAQHCACOAc4h6YzJi1qWymNNUHlwYcT0JDWXQbACYhGgeh6gHM4Ghuh2/R0YePNiaUCTSmFcvdDCY1paZvhht3nQ2VmGmahICSR5vQHmDt6DcozeZSnp2FdLLZHhwdq94SVd+xMaJqWtrkM2L1uVHILpy0t8igidymXExfHMzBCQbhCIdga7Onz8etqkdgkUYTZbYCSqORmULlQEIq4J3jyexMA8jdu9BRzuaKyLN3udkNjDEqICID+2hbm797Wwez24/T3vJTE3aFTP9Sd9vT1NziVEMUGr1c35+Y2b5jKnqgNKqWglMLspjs6/rj1dudie2mdao07J5s3dCzt/werJTyI1yYqpQAAAABJRU5ErkJggg==) no-repeat  2px -34px;
+}
+
+/* Set to green check and text when valid */
+.input-help li.valid {
+    color:#3a7d34;
+    background-position: 2px 6px;
+}
+
+.requerimientos-clave {
+    display: none;
+    position:absolute;
+    z-index: 999;
+    left: 142px;
+    padding:10px;
+    background:#fefefe;
+    font-size:.7em;
+    border-radius:5px;
+    box-shadow:0 1px 3px #aaa;
+    border:1px solid #ddd;
+    opacity: 0.9;
+}
+
+.requerimientos-clave-mostrar {
+    display: block;
+}

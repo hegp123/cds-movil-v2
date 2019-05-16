@@ -1,0 +1,57 @@
+<!--
+    * Vista de registro de pagos
+    * Desarrollado por: Roberto Chajin Ortiz y Ricardo Suarez Vera - Visión Ingeniería S.A.S
+    * Revisión No.: 1.0
+-->
+
+<ion-nav-bar class="bar-fdlm cdsMainHeader">
+    <ion-nav-buttons side="secondary">
+        <button class="button-icon icon ion-gear-a" ng-click="mostrarOpciones()"></button>
+    </ion-nav-buttons>        
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-view>
+    <ion-content class="padding has-header">
+        <div class="sub-header padding">
+            {{nombreVista}}
+        </div>
+
+        <div class="padding" id="facturaGeneradaHtml">
+            <center><p ng-if="mostrarFactura"><b>Reimpresión</b></p></center>
+            <p class="fdlm"><b>OR No.:</b> {{infoFactura.numeroFactura}}</p>
+            <p><b>Fecha:</b> {{infoFactura.fecha}}</p>        
+            <p><b>Agencia:</b> {{infoFactura.agencia}}</p>
+            <p><b>Cliente:</b> {{infoFactura.cliente}}</p>
+            <p><b>Cédula:</b> {{infoFactura.cedulaCliente| number}}</p>
+            <p><b>Crédito:</b> {{infoFactura.codigoCredito}}</p>
+            <!--<p ng-hide="mostrarMensajeAbono"><b>{{mensajeAbonoParametrizado}}</b></p>-->
+            <!--<p ng-hide="mostrarCapital"><b>Capital:</b> {{infoFactura.capital| currency}}</p>
+            <p ng-hide="mostrarIcorrientes"><b>Intereses corrientes:</b> {{infoFactura.icorrientes| currency}}</p>
+            <p ng-hide="mostrarHC"><b>Honorarios y comisiones:</b> {{infoFactura.honorariosComisiones| currency}}</p>
+            <p ng-hide="mostrarIva"><b>IVA:</b> {{infoFactura.iva| currency}}</p>
+            <p ng-hide="mostrarSeguro"><b>Seguro:</b> {{infoFactura.seguro| currency}}</p>
+            <p ng-hide="mostrarMora"><b>Mora:</b> {{infoFactura.mora| currency}}</p>
+            <p ng-hide="mostrarGSprocesal"><b>Gastos procesales:</b> {{infoFactura.gprocesales| currency}}</p>
+            <p ng-hide="mostrarPrejuridico"><b>Prejurídico:</b> {{infoFactura.prejuridico| currency}}</p>
+            <p ng-hide="mostrarHonorarios"><b>Jur-Ing para terceros:</b> {{infoFactura.honorarios| currency}}</p>-->
+            <p class="fdlm"><b>Total:</b> {{infoFactura.total| currency}}</p>
+            <br/>
+            <p ng-if="mensajePantalla != ''">{{mensajePantalla}}</p>
+            <br/>
+            <p ng-if="mostrarMensajeMora"><b>Mensaje:</b> {{infoFactura.mensaje}}</p>
+            <p style="text-align: justify;"><b>Promoción: </b>{{mensajeGlobal}}</p>
+            <br/>
+        </div>
+
+        <div class="padding">
+            <button class="button button-fdlm button-block" ng-click="reimprimir()" ng-show="mostrarBoton">
+                <i class="icon ion-printer"></i> Imprimir
+            </button>
+            <button class="button button-fdlm button-block" ng-click="cerrarFactura()" ng-show="mostrarBotonCerrar">
+                <i class="icon ion-close"></i> Cerrar
+            </button>            
+        </div>
+    </ion-content>
+</ion-view>        

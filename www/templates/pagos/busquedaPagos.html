@@ -1,0 +1,28 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-fdlm cdsModalHeader">
+        <div class="buttons">
+            <div class="buttons">
+                <button class="button button-icon icon-left ion-android-arrow-back" style="color: #fff" ng-click="cerrarBusqueda()"></button>
+            </div>
+        </div>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div class="sub-header padding">
+            {{nombreVista}}
+        </div>
+        <ion-list class="regPagoList">
+            <ion-item class="list-item item-text-wrap" ng-repeat="credito in creditos" href ng-click="prepararPago(credito)">
+                <p class="fdlm" style="display: flex;"><b>Nombre del cliente:</b> {{credito.nombreCliente}}</p>
+                <p><b>Cédula:</b> {{credito.cedulaCliente | number}}</p>
+                <p><b>Producto:</b> {{credito.tipoCredito}}</p>
+                <p><b>Crédito:</b> {{credito.codigoCredito}}</p>
+                <p><b>Valor cuota:</b> {{credito.cuotaCredito | currency}}</p>
+                <p><b>Fecha de vencimiento:</b> {{credito.vencimiento | date:"MMMM dd 'de' yyyy"}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+<!--    <ion-footer-bar class="bar-footer bar-stable hide-on-keyboard-open">
+        <p class="letra-peque">Bienvenido {{datosSesion.nombreUsuario}}</p>
+    </ion-footer-bar>-->
+</ion-modal-view>

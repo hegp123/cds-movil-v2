@@ -1,0 +1,39 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-fdlm cdsModalHeader">
+        <div class="buttons">
+            <div class="buttons">
+                <button class="button button-icon icon-left ion-android-arrow-back" style="color: #fff" ng-click="cerrarPago()"></button>
+            </div>
+        </div>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div class="sub-header padding">
+            {{nombreVista}}
+        </div>
+        <ion-list class="regPagoList">
+            <ion-item class="list-item item-text-wrap" ng-repeat="pago in credito" href="#">
+                <p class="fdlm"><b>Nombre del cliente:</b> {{pago.nombreCliente}}</p>
+                <p><b>Cédula:</b> {{pago.cedulaCliente| number}}</p>
+                <p><b>Producto:</b> {{pago.tipoCredito}}</p>
+                <p><b>Crédito:</b> {{pago.codigoCredito}}</p>
+                <p><b>Valor cuota:</b> {{pago.cuotaCredito| currency}}</p>
+                <p><b>Fecha de vencimiento:</b> {{pago.vencimiento| date:"MMMM dd 'de' yyyy"}}</p>
+
+                <form name="frmPagarCuotaCredito" novalidate="">
+                    <label class="item item-input cajaBusqueda">
+                        <i class="icon ion-social-usd placeholder-icon"></i>
+                        <input type="number" ng-model="valorPagar" ng-readonly="parametrizado" solo-numeros ng-init="valorPagar = pago.cuotaCredito" placeholder="Valor a pagar">
+                    </label>
+
+                    <button class="button button-fdlm button-block padding" ng-click="realizarPago(pago, valorPagar)" ng-disabled="frmPagarCuotaCredito.$invalid">
+                        <i class="icon ion-social-usd"></i> Pagar
+                    </button>                
+                </form>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+    <!--    <ion-footer-bar class="bar-footer bar-stable hide-on-keyboard-open">
+            <p class="letra-peque">Bienvenido {{datosSesion.nombreUsuario}}</p>
+        </ion-footer-bar>-->
+</ion-modal-view>

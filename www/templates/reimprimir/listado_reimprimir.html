@@ -1,0 +1,22 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-fdlm cdsModalHeader">
+        <div class="buttons">
+            <div class="buttons">
+                <button class="button button-icon icon-left ion-android-arrow-back" style="color: #fff" ng-click="modalListadoReimprimir.hide()"></button>
+            </div>
+        </div>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div class="sub-header padding">
+            {{nombreVista}}
+        </div>
+        <ion-list class="regPagoList">
+            <ion-item class="list-item item-text-wrap" ng-repeat="factura in facturas" href ng-click="reimprimirFactura(factura)">
+                <p class="fdlm"><b>OR No.:</b> {{factura.numeroFactura}}</p>
+                <p><b>Cliente:</b> {{factura.cliente}}</p>
+                <p><b>Fecha:</b> {{factura.fecha}}</p>
+                <p><b>Total:</b> {{factura.total | currency}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-modal-view>

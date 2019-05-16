@@ -1,0 +1,32 @@
+<ion-nav-bar class="bar-fdlm cdsMainHeader">
+    <ion-nav-buttons side="secondary">
+        <button class="button-icon icon ion-gear-a" ng-click="mostrarOpciones()"></button>
+    </ion-nav-buttons>        
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-view>
+    <ion-content class="has-header has-header has-subheader">
+        <div class="sub-header padding">
+            {{nombreVista}}
+        </div>  
+        <div class="padding">
+            <form name="frmBuscarReporte" novalidate="">
+                <p class="fdlm">Fecha:</p>
+                <label class="item item-input cajaBusqueda " ng-class="{ 'has-error' : frmBuscarReporte.fecha.$invalid}">
+                    <i class="icon ion-calendar placeholder-icon"></i>
+                    <input type="date" id="fechaReporte" ng-model="fechaBusqueda.fecha" ng-focus="seleccionarFecha()" readonly>
+                </label>
+
+                <button class="button button-fdlm button-block" ng-click="buscarPagos()">
+                    <i class="icon ion-search"></i> Buscar
+                </button>
+            </form>
+        </div>
+    </ion-content>
+
+<!--    <ion-footer-bar class="bar-footer bar-stable hide-on-keyboard-open">
+        <p class="letra-peque">Bienvenido {{datosSesion.nombreUsuario}}</p>
+    </ion-footer-bar>-->
+</ion-view>

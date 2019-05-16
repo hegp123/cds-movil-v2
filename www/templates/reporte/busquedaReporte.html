@@ -1,0 +1,39 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-fdlm cdsModalHeader">
+        <div class="buttons">
+            <div class="buttons">
+                <button class="button button-icon icon-left ion-android-arrow-back" style="color: #fff" ng-click="modalReporte.hide()"></button>
+            </div>
+        </div>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div class="sub-header padding">
+            {{nombreVista}}
+        </div>
+
+        <div class="padding">
+            <p><b>Fecha:</b> {{fechaBusqueda.fecha| date:"EEEE',' dd 'de' MMMM 'de' yyyy"}}</p>
+            <p><b>Punto de recaudo:</b> {{puntoRecaudo}}</p>
+            <p><b>Total pagado:</b> {{totalPagado| currency}}</p>
+        </div>
+        <ion-list>
+            <ion-item class="list-item" ng-repeat="pago in pagos">
+                <p class="fdlm"><b>OR No.:</b> {{pago.factura}}</p>
+                <p ng-show="pago.mostrar"><b>Valor pagado:</b> {{pago.valor| currency}}</p>
+                <p ng-hide="pago.mostrar">ANULADA</p>
+            </ion-item>
+        </ion-list>
+
+        <br/>
+
+        <div class="padding">
+            <button class="button button-fdlm button-block" ng-click="imprimirReporte()">
+                <i class="icon ion-printer"></i> Imprimir
+            </button>         
+        </div>
+    </ion-content>
+
+    <!--    <ion-footer-bar class="bar-footer bar-stable hide-on-keyboard-open">
+            <p class="letra-peque">Bienvenido {{datosSesion.nombreUsuario}}</p>
+        </ion-footer-bar>-->
+</ion-modal-view>
