@@ -41,7 +41,7 @@ npm install -g cordova@6.5.0
 
 ## convertir la aplicacion en android, construye el folder platforms, primero la borramos y la volvemos a crear
 2.  cordova platform rm android
-    cordova platform add android
+    cordova platform add android   cordova platform add android@8.0.0
 
 IMPORTANTE: despues de correr el antirior comando "add" debemos elegir la version de la API de android en la cual se va a generar el App.
 - Abrimos el archivo platforms\android\project.properties
@@ -54,7 +54,7 @@ IMPORTANTE: despues de correr el antirior comando "add" debemos elegir la versio
 ## requisitos:
 ## En el pc debe estar instalado los driver del celular que se quiera instalar directamente para pruebas
 ## el cel debe estar conectado al pc
-4. ionic run android
+4. ionic run android --device           cordova emulate android 
 
 ## Eliminar plugin, para que sean generados nuevamente con el apk que se desea subir a produccion
 ## Esto estaba en el manual que hizo roberto.chajin
